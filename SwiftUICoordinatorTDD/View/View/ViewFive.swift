@@ -9,15 +9,18 @@ import SwiftUI
 struct ViewFive: View {
     @EnvironmentObject private var coordinator: Coordinator<ViewsDestination>
     var body: some View {
-        VStack {
-            Text("ViewFive")
-            
-            Button {
-                coordinator.push(.reuseable(type: .views))
-            } label: {
-                Text("Reuseable View로 이동")
+        ZStack {
+            Color.white.ignoresSafeArea()
+            VStack {
+                Text("ViewFive")
+                
+                Button {
+                    coordinator.push(.reuseable(type: .views))
+                } label: {
+                    Text("Reuseable View로 이동")
+                }
+                .buttonStyle(.borderedProminent)
             }
-
         }
     }
 }

@@ -9,19 +9,25 @@ import SwiftUI
 import Factory
 
 struct RootView: View {
-    
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor.white
+    }
     var body: some View {
         TabView {
             ViewTwo()
                 .tabItem {
-                    Image(systemName: "1.square.fill")
-                    Text("Views")
+                    VStack {
+                        Image(systemName: "1.square.fill")
+                        Text("Views")
+                    }
                 }
             
             ProductView()
                 .tabItem {
-                    Image(systemName: "2.square.fill")
-                    Text("Products")
+                    VStack {
+                        Image(systemName: "2.square.fill")
+                        Text("Products")
+                    }
                 }
         }
         .background(Color.white)
