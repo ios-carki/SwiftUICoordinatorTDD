@@ -9,4 +9,5 @@ import Foundation
 enum ProductsDestination: Hashable {
     // MARK: Product
     case detail(data: Product)
+    case reuseable(type: DestinationType)
 }

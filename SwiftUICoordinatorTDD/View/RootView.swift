@@ -24,6 +24,7 @@ struct RootView: View {
                     Text("Products")
                 }
         }
+        .background(Color.white)
     }
 }
 

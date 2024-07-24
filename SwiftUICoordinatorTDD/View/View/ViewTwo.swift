@@ -12,6 +12,8 @@ struct ViewTwo: View {
     var body: some View {
         NavigationStack(path: $coordinator.paths) {
             VStack {
+                Text("View Two")
+                
                 Button {
                     coordinator.push(.view3)
                 } label: {
@@ -27,6 +29,8 @@ struct ViewTwo: View {
                     ViewFour()
                 case .view5:
                     ViewFive()
+                case .reuseable:
+                    ReuseableView(type: .views, text: "Views", coordinator: coordinator)
                 }
             }
         }

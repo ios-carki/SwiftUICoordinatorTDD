@@ -7,12 +7,22 @@
 import SwiftUI
 
 struct ViewFive: View {
-    @ObservedObject private var coordinator = Coordinator<ViewsDestination>()
+    @EnvironmentObject private var coordinator: Coordinator<ViewsDestination>
     var body: some View {
-        Text("ViewFive")
+        VStack {
+            Text("ViewFive")
+            
+            Button {
+                coordinator.push(.reuseable(type: .views))
+            } label: {
+                Text("Reuseable View로 이동")
+            }
+
+        }
     }
 }
 
 #Preview {
     ViewFive()
 }
+

@@ -10,12 +10,16 @@ struct ViewThree: View {
     @EnvironmentObject private var coordinator: Coordinator<ViewsDestination>
     
     var body: some View {
-        Button {
-            coordinator.push(.view4)
-        } label: {
-            Text("View Two")
+        VStack {
+            Text("View Three")
+            
+            Button {
+                coordinator.push(.view4)
+            } label: {
+                Text("To View Four")
+            }
+            .buttonStyle(.borderedProminent)
         }
-        .buttonStyle(.borderedProminent)
     }
 }
 

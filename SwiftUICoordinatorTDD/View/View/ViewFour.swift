@@ -9,12 +9,16 @@ import SwiftUI
 struct ViewFour: View {
     @EnvironmentObject private var coordinator: Coordinator<ViewsDestination>
     var body: some View {
-        Button {
-            coordinator.push(.view5)
-        } label: {
-            Text("View Two")
+        VStack {
+            Text("View Four")
+            
+            Button {
+                coordinator.push(.view5)
+            } label: {
+                Text("To View Five")
+            }
+            .buttonStyle(.borderedProminent)
         }
-        .buttonStyle(.borderedProminent)
     }
 }
 

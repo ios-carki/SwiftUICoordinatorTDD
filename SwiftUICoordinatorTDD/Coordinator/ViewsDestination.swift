@@ -1,6 +1,6 @@
 //   Created on 2024/07/22
 //   Using Swift 5.0
-//   RootDestination.swift
+//   ViewsDestination.swift
 //   Created by Owen
   
 
@@ -13,4 +13,6 @@ enum ViewsDestination: Hashable {
     case view4
     
     case view5
+    
+    case reuseable(type: DestinationType)
 }
